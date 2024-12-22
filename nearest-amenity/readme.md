@@ -1,157 +1,119 @@
-# Hexabot Nearby Places Plugin
+# Hexabot Template Starter
 
-A powerful Hexabot plugin that helps users find nearby places using OpenStreetMap and Overpass API. This plugin enables your chatbot to provide location-based recommendations for various amenities like cafes, restaurants, pharmacies, hospitals, and more.
+Welcome to the **Hexabot Template Starter** repository! This template provides everything you need to get started with building a custom Hexabot project. It includes essential folders and files to help you extend Hexabot, define your own modules, and quickly run your project in Docker. Below you'll find details on the structure and how to use this template.
 
-## Features
+Not familiar with [Hexabot](https://hexabot.ai/) ? It's an open-source chatbot / agent solution that allows users to create and manage AI-powered, multi-channel, and multilingual chatbots with ease. If you would like to learn more, please visit the [official github repo](https://github.com/Hexastack/Hexabot/).
 
-- 🔍 Find nearby places based on user location
-- 📍 Integration with OpenStreetMap and Overpass API
-- 📏 Configurable search radius
-- 🗺️ Direct links to OpenStreetMap locations
-- 📱 Mobile-friendly implementation
-- 🌐 Support for various amenity types
-- 📊 Distance calculations in kilometers
-- 🔄 Automatic sorting by distance
+## Project Structure
 
-## Prerequisites
+- **extensions/**: This folder is where you can develop your own extensions for Hexabot. Inside, you'll find subfolders for:
 
-- Node.js and npm/yarn
-- Hexabot project
-- Internet connection (for API access)
-- Mobile app with location services capability
+  - **channels/**: Add new messaging channels.
+  - **helpers/**: Add helper functions or utilities.
+  - **plugins/**: Create plugins to create custom blocks in the visual editor. Plugins is where you can perform text-to-action and integrate with 3rd party APIs. To get started, there is a `hello` plugin provided as an example.
 
-## Installation
+- **modules/**: Since Hexabot API is built on top of NestJS, this folder allows you to extend the Hexabot API by adding your own modules (controllers, services, etc.).
 
-1. Navigate to your Hexabot project's plugins directory:
+- **Dockerfile**: Use this file to build a Docker image on top of Hexabot. It's pre-configured to get your project up and running in a containerized environment.
 
-```bash
-cd your-hexabot-project/extensions/plugins
-```
+- **docker/docker-compose.yml**: This file defines the services needed to run your Hexabot project using Docker Compose. It simplifies the setup of multiple services such as databases or other dependencies.
 
-2. Clone or copy the plugin files:
+## Getting Started
 
-```bash
-git clone https://github.com/yourusername/hexabot-plugin-nearby-places.git
-# or manually copy the files into hexabot-plugin-nearby-places directory
-```
+1. **Install Hexabot CLI**:
+   To create a new Hexabot project, first install the Hexabot CLI globally:
 
-## Configuration
+   ```bash
+   npm install -g hexabot-cli
+   ```
 
-The plugin can be configured through the `settings.ts` file. Available settings:
+2. **Create Your Project**:
+   Use the Hexabot CLI to create a new chatbot project:
 
-- `request_location_message`: Message shown when requesting user location
-- `error_message`: Message shown when an error occurs
-- `search_radius`: Search radius in meters (default: 1000)
+   ```bash
+   hexabot create my-chatbot
+   ```
 
-## Supported Amenity Types
+3. **Configure Your Environment**:
 
-The plugin supports various OpenStreetMap amenity types, including:
+   - Copy the `.env.example` file to `.env` and customize it according to your environment and configuration needs.
 
-- restaurant
-- hospital
-- pharmacy
-- atm
-- bank
-- cafe
-- school
-- gas station (fuel)
-- police
-- parking
+   ```bash
+   cp .env.example .env
+   ```
 
-Custom amenity types are also supported as long as they match OpenStreetMap tags.
+4. **Run the Project**:
+   Navigate into the newly created folder and run the following command to start the project in development mode:
 
-## Usage
+   ```bash
+   hexabot dev
+   ```
 
-### Basic Commands
+   For production mode, you can use:
 
-Users can trigger the plugin using these patterns:
+   ```bash
+   hexabot start
+   ```
 
-- "find nearest [amenity]"
-- "nearby [amenity]"
-- "where is [amenity]"
-- "find [amenity]"
+   _Note_: The first run may take some time as it needs to download all required Docker images.
 
-Examples:
+5. **Configure your NLU Engine**:
+   After creating your new project, the **Hexabot LLM-NLU Engine** will be enabled by default. This NLU engine relies on one of the following LLM helpers being present, you can enable one of these by following the steps detailed in [LLM NLU Engine](https://docs.hexabot.ai/user-guide/nlu/nlu-engines/llm-nlu-engine) documentation page:
 
-```
-User: "find nearest hospital"
-User: "nearby restaurant"
-User: "where is pharmacy"
-User: "find atm"
-```
+   - Ollama Helper (`hexabot-helper-ollama`)
+   - Google Gemini Helper (`hexabot-helper-gemini`)
+   - OpenAI ChatGPT Helper (`hexabot-helper-chatgpt`)
 
-### Response Format
+   You must follow the instructions of the selected LLM helper in their specific documentation before starting the project.
 
-The plugin returns up to 5 nearest places, sorted by distance. Each result includes:
+## Built-in Features
 
-- Place name
-- Distance in kilometers
-- Address (Using OSM)
-- Link to OpenStreetMap location
+- **Generative AI Support**: This template includes both the **ollama helper** and **plugin** by default to help you get started with generative AI features.
+- **NLU API**: A built-in Natural Language Understanding (NLU) API is provided for intent recognition and language detection.
 
-Example response:
+## Extending Hexabot
 
-```
-Here are the nearest places I found:
+You can easily extend Hexabot's functionality by installing additional extensions (channels, helpers, plugins) via npm. Below are some examples:
 
-1. Central Hospital
-   Distance: 0.75 km
-   Address: 123 Medical Drive
-   Map: https://www.openstreetmap.org/?mlat=...
+- Install a new channel (e.g., Messenger):
 
-2. Medical Center
-   Distance: 1.20 km
-   Address: 456 Health Avenue
-   Map: https://www.openstreetmap.org/?mlat=...
-```
+  ```bash
+  npm install hexabot-channel-messenger
+  ```
 
-## Mobile Integration
+- Install a new plugin (e.g., ChatGPT integration):
+  ```bash
+  npm install hexabot-plugin-chatgpt
+  ```
 
-### Location Permissions
+## Docker Setup
 
-Ensure your mobile app:
+This template comes with a pre-configured **Dockerfile** and **docker-compose.yml** to help you containerize your project quickly.
 
-1. Requests location permissions from the user
-2. Handles permission states appropriately
-3. Provides accurate location data to the chatbot
+- **Dockerfile**: Builds your Hexabot-based project.
+- **docker-compose.yml**: Defines the necessary services for your project, allowing you to start everything with a single command.
 
-### Location Data Format
+## Documentation
 
-Location data should be provided in the context metadata:
+For detailed information on how to get started, as well as in-depth user and developer guides, please refer to our full documentation available in the docs folder or visit the [Documentation](https://docs.hexabot.ai).
 
-```typescript
-{
-  metadata: {
-    location: {
-      latitude: number;
-      longitude: number;
-      accuracy?: number;
-      timestamp: number;
-    }
-  }
-}
-```
+## Contributing
 
-### Map Links
+We welcome contributions from the community! Whether you want to report a bug, suggest new features, or submit a pull request, your input is valuable to us.
 
-The plugin generates OpenStreetMap links that can be:
+Please refer to our contribution policy first : [How to contribute to Hexabot](https://github.com/Hexastack/Hexabot/blob/main/CONTRIBUTING.md)
 
-- Opened in a web browser
-- Handled by a native map application
-- Displayed in an in-app map view
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](./CODE_OF_CONDUCT.md)
 
-## Error Handling
+Feel free to join us on [Discord](https://discord.gg/rNb9t2MFkG)
 
-The plugin handles various error cases:
+## License
 
-- Missing location data
-- API failures
-- Invalid amenity types
-- No results found
+This software is licensed under the GNU Affero General Public License v3.0 (AGPLv3) with the following additional terms:
 
-## API Credits
+1. The name "Hexabot" is a trademark of Hexastack. You may not use this name in derivative works without express written permission.
+2. All derivative works must include clear attribution to the original creator and software, Hexastack and Hexabot, in a prominent location (e.g., in the software's "About" section, documentation, and README file).
 
-This plugin uses:
+---
 
-- OpenStreetMap data © OpenStreetMap contributors
-- Overpass API
+Happy building with Hexabot! 🎉

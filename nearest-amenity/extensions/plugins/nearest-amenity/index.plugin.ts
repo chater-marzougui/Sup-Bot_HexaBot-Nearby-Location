@@ -229,8 +229,8 @@ export class NearbyPlacesPlugin extends BaseBlockPlugin<typeof SETTINGS> {
 
     // Check if location data exists in context
     const x = {
-      latitude: context.user_location.lat,
-      longitude: context.user_location.lon,
+      latitude: context.user_location.lat !== 0 ? 0 : 36.3680656,
+      longitude: context.user_location.lon !== 0 ? 0 : 10.5337735,
       accuracy: 0,
       timestamp: 0,
     };
