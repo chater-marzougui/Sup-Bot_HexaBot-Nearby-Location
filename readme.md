@@ -8,7 +8,6 @@
 
 </div>
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
     <h1 style="font-size:35px">Hexabot Nearby Locations <br></h1>
@@ -17,12 +16,12 @@
         A comprehensive bipolar disorder management app designed to improve mental health and well-being.
     <br>
     <br>
-    <a href="https://github.com/ahmedessouaied/TSYP12_VIVAMENTE/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/ahmedessouaied/TSYP12_VIVAMENTE/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
   <br><br>
-  <a href="https://github.com/ahmedessouaied/TSYP12_VIVAMENTE">
+  <a href="https://github.com/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location">
     <img src="./Nearby_location_APK_SourceCode/assets/images/logo.png" alt="Logo" width="256px">
   </a>
 </div>
@@ -262,20 +261,21 @@ Please follow our coding standards and include tests.
 
 ## 👥 Credits
 
+- Hexabot platform
+- Orange Digital Center
 - OpenStreetMap data © OpenStreetMap contributors
 - Overpass API
 - Flutter_map package
-- Hexabot platform
 
-## 🆘 Support
-
-- GitHub Issues
-- Discord Community
-- Documentation Wiki
-
-## 🔗 Links
-
-- [Plugin Repository](https://github.com/yourusername/hexabot-plugin-nearby-places)
-- [Mobile App Repository](https://github.com/yourusername/hexabot-nearby-places-app)
-- [Documentation](https://docs.yourdomain.com)
-- [Community Discord](https://discord.gg/yourdiscord)
+[contributors-shield]: https://img.shields.io/github/contributors/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location.svg?style=for-the-badge
+[contributors-url]: https://github.com/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location.svg?style=for-the-badge
+[forks-url]: https://github.com/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location/network/members
+[stars-shield]: https://img.shields.io/github/stars/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location.svg?style=for-the-badge
+[stars-url]: https://github.com/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location/stargazers
+[issues-shield]: https://img.shields.io/github/issues/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location.svg?style=for-the-badge
+[issues-url]: https://github.com/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location/issues
+[license-shield]: https://img.shields.io/github/license/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location.svg?style=for-the-badge
+[license-url]: https://github.com/chater-marzougui/Sup-Bot_HexaBot-Nearby-Location/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/chater-marzougui-342125299/
