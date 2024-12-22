@@ -225,10 +225,12 @@ export class NearbyPlacesPlugin extends BaseBlockPlugin<typeof SETTINGS> {
     const settings = await this.settingService.getSettings();
     const args = this.getArguments(block);
 
+    console.log('args:', settings);
+
     // Check if location data exists in context
     const x = {
-      latitude: 36.3680656,
-      longitude: 10.5337735,
+      latitude: context.user_location.lat,
+      longitude: context.user_location.lon,
       accuracy: 0,
       timestamp: 0,
     };
