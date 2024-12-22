@@ -1,0 +1,17 @@
+{
+  "name": "hexabot-plugin-nearby-places",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "description": "A Hexabot plugin that finds nearby places using OpenStreetMap and Overpass API",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "keywords": [
+    "hexabot-plugin",
+    "location",
+    "places",
+    "openstreetmap",
+    "overpass"
+  ],
+  "license": "MIT"
+}

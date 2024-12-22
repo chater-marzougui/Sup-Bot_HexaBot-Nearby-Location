@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "42326241425",
+    "project_id": "hexabot-nearby-places",
+    "storage_bucket": "hexabot-nearby-places.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42326241425:android:e16672a670b6938ea00f30",
+        "android_client_info": {
+          "package_name": "com.hexabot.nearby.hexabot_nearby_location"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42326241425-son6q4bfu5n2v6qbe0ofa69b5a76nef6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrqcDdfO7dvSiY7BhAW2UIv4zvO0m6Jq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42326241425-son6q4bfu5n2v6qbe0ofa69b5a76nef6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
