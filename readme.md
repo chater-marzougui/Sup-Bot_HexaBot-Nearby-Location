@@ -55,7 +55,12 @@ A comprehensive location-based search solution combining a Hexabot plugin and Fl
 
 ## Youtube Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lFwQvoYBGJo?si=JyIICXvTUa2oV_Uh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div align="center">
+
+[![YouTube Video](https://img.youtube.com/vi/lFwQvoYBGJo/0.jpg)](https://www.youtube.com/watch?v=lFwQvoYBGJo)
+
+</div>
+Click the image above to watch the video.
 
 ## 📱 Screenshots
 
