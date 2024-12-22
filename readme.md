@@ -53,6 +53,22 @@ A comprehensive location-based search solution combining a Hexabot plugin and Fl
 - 🌙 Dark mode support
 - 🔗 Deep linking to OpenStreetMap
 
+### You can install the app directly
+
+- Download the Hexabot_nearby_location_APK file to your phone and extract it
+- Install the apk
+- If it tells you about security risks, just ignore them and press install anyway
+- You can sign up with your gmail, or normal signUp, or login with:
+
+```typescript
+  email: admin@hexabot.com
+  password: adminadmin
+```
+
+- Finally in the chat put: nearby <your-search-value>
+  which should be in the list of overpass-turbo: restaurant, cafe, hospital, police station, fuel ...
+  If no results it's either the element doesn't exist in overpass turbo, or it doesn't in the radius of 5km.
+
 ## Youtube Video
 
 <div align="center">
